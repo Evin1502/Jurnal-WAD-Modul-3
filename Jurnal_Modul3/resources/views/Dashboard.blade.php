@@ -1,4 +1,5 @@
 <!-- 1. Hubungkan file Dashboard.blade.php dengan dashapp.blade.php-->
+@extends('app')
 
 @section('title', 'Dashboard Mahasiswa')
 
@@ -8,7 +9,7 @@
         <div class="animated-bg"></div>
 
          <!-- 2. Isi value atribut href agar mendirect menuju halaman profile-->
-        <a href="" class="btn-profile-top">
+        <a href="{{ url ('profil) }}'" class="btn-profile-top">
             <i class="bi bi-person-circle me-1"></i> Lihat Profil
         </a>
 
@@ -19,7 +20,7 @@
                     <div class="logo-ring ring-2"></div>
                     <div class="logo-center">
                         <!-- 3. Isi value atribut src agar menampilkan logo EAD-->
-                        <img src="" alt="Logo EAD">
+                        <img src="{{ asset('images/logo-ead.png') }}" alt="Logo EAD">
                     </div>
                 </div>
             </div>
@@ -27,8 +28,8 @@
             <div class="dashboard-right">
                 <div class="greeting-box">
                     <h1 class="greeting-title">
-                        <!-- 4. Panggil variabel dari controller untuk menampilkan salam-->
-                        <span class="highlight-name"> <!-- 5. Panggil variabel dari controller untuk menampilkan nama--></span>
+                        <!-- 4. Panggil variabel dari controller untuk menampilkan salam--> {{ $salam }}
+                        <span class="highlight-name"> <!-- 5. Panggil variabel dari controller untuk menampilkan nama--> {{ $mahasiswa -> nama }} </span>
                         <span class="wave">👋</span>
                     </h1>
                     <p class="greeting-sub">Selamat datang di dashboard praktikan EAD</p>

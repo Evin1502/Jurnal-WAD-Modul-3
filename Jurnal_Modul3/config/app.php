@@ -66,7 +66,7 @@ return [
     */
 
     # 1. Ubah Timezone Berdasarkan Waktu Indonesia Barat
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Jakarta',
 
     /*
     |--------------------------------------------------------------------------

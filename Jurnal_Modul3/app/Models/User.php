@@ -21,7 +21,12 @@ class User extends Authenticatable
 
     # 1. Sesuaikan atribut $fillable pada model dengan kolom yang didefinisikan di dalam migration.
     protected $fillable = [
-
+        'nama',
+        'nim',
+        'kelas',
+        'prodi',
+        'fakultas',
+        'email',
     ];
 
     /**

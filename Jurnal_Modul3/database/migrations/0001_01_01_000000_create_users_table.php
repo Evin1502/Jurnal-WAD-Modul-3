@@ -11,6 +11,14 @@ return new class extends Migration
     {
         # 1. Buat kolom tabel sesuai data yang ingin ditampilkan
         Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('nim')->unique();
+            $table->string('kelas');
+            $table->string('prodi');
+            $table->string('fakultas');
+            $table->string('email')->unique();
+            $table->timestamps();
 
         });
 
